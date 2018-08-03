@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>AddUsers</title>
+</head>
+<body>
+  <div class="container">
+          
+       
+    <ul class="list-group">
+      <input type="text" class="form-control" placeholder="add title" (keyup.enter)="createPosts(title)" #title>
+      <br>   
+      <li class="list-group-item" *ngFor="let post of posts">
+        <!-- {{post.id}} -->              
+        {{post.title}}
+      <button class="btn btn-info btn-sm" (click)="updatePost(post)">Update</button>
+      <button class="btn btn-danger btn-sm" (click)="deletePost(post)">Remove</button>
+      </li>
+    </ul>
+    <br>
+    <br>
+
+    <input type="text" [(ngModel)]="text" class="form-control" placeholder="two data binding demo"/>
+    {{text}}
+</div>
+</body>
+</html>
